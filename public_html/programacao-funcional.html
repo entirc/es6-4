@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link rel="shortcut icon" href="Retro.png"/>
+        <title>ENTI ES6</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- https://medium.com/tableless/entendendo-programa%C3%A7%C3%A3o-funcional-em-javascript-de-uma-vez-c676489be08b#.ym86slctr 
+        http://matheuslima.com/
+        -->
+
+        <script>
+            /*
+             function square(x) {
+             return x * x;
+             }
+             let retorno = square(2);
+             console.log(retorno);
+             */
+            
+            /*
+             function generateDate(){
+             let date = new Date();
+             return date;
+             }
+             
+             let retorno = generateDate();
+             console.log(retorno);
+             */
+            
+            /*
+             let calcular = function (fn, x, y) {
+             return fn(x, y);
+             };
+             
+             //  let soma = function (x, y) {
+             //    return x + y;
+             // };
+             
+             let soma = (x, y) => x + y;
+             
+             let multiplica = function (x, y) {
+             return x * y;
+             };
+             
+             let somaRetorno = calcular(soma, 2, 5);
+             console.log(somaRetorno);
+             let multiplicaRetorno = calcular(multiplica, 2, 5);
+             console.log(multiplicaRetorno);
+             */
+            
+            /*
+             * https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+             * O método map() invoca a função callback passada por argumento para cada 
+             * elemento do Array e devolve um novo Array como resultado.
+             */
+            
+            
+            //let numeros = [2, 3, 4];
+            
+            /* function quadrado(x) {
+             return x * x;
+             }*/
+            /*  let quadrado = function (x) {
+             return x * x;
+             };*/
+            
+            /*
+             let quadrado = x => x * x;
+             
+             var quadradosDosNumeros = numeros.map(quadrado);
+             
+             console.log(quadradosDosNumeros);
+             */
+            
+            /*
+             let estudantes = [
+             {nome:'Anna', ano:6},
+             {nome:'Jorge', ano:4},
+             {nome:'Maria', ano:9}
+             ];
+             
+             let professores = [
+             {nome:'Marcos', salario:2500},
+             {nome:'Tadeu', salario:3700},
+             {nome:'Angela', salario:1900}
+             ];
+             
+             let porNome = object => object.nome;
+             
+             let porNomes = lista => lista.map(porNome);
+             
+             let estudantesLista = porNomes(estudantes);
+             console.log(estudantesLista);
+             let professoresLista = porNomes(professores);
+             console.log(professoresLista);
+             */
+            
+            /*
+             * https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filtro
+             * O método filter() cria um novo array com todos os elementos que 
+             * passaram ao teste (retornaram true) implementado pela função fornecida.
+             */
+            /*
+             let numeros = [1, 4, 7, 10];
+             
+             let ehMaiorQueQuatro = valor => valor > 4;
+             
+             let resultado = numeros.filter(ehMaiorQueQuatro);
+             
+             console.log(resultado);
+             */
+            
+            /*
+             * https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+             * O método reduce() aplica uma função sobre um acumulador e cada 
+             * valor do array (da esquerda para direita), deve reduzí-lo a um único valor.
+             */
+            
+            /*
+             let numeros = [1,2,3];
+             
+             let soma = (x,y) => x+y;
+             
+             let retorno = numeros.reduce(soma,0);
+             
+             console.log(retorno);
+             
+             */
+            
+            /*
+             let meses = ['Jan', 'Fev', 'Mar', '', 'Dez'];
+             
+             let retornaMeses = (anterior, atual) => {
+             console.log(atual);
+             if (atual === '') {
+             console.log('vazio');
+             return anterior;
+             } else {
+             return anterior + '/' + atual;
+             }
+             };
+             
+             let retorno = meses.reduce(retornaMeses);
+             
+             console.log(retorno);
+             
+             */
+            
+            
+            //Currying
+            //     let somar = (x, y) => x + y;
+            //   let retorno = somar(1, 2);
+            //  console.log(retorno);
+            
+            /*let somar1 = function (x) {
+             console.log('x ' + x);
+             return function (y) {
+             console.log('y ' + y);
+             return x + y;
+             };
+             };*/
+            /*
+             let somar1 = x => y => x+y;
+             
+             let retorno1 = somar1(1)(2);
+             console.log(retorno1);
+             
+             
+             let adicionarCinco = somar1(5);
+             let r = adicionarCinco(3);
+             console.log(r);
+             */
+            
+            /*
+             let saudacao = fala => nome => fala + nome;
+             let inicio = saudacao('Olá '); 
+             console.log(inicio);
+             
+             let saudacaoCompleta = inicio('Michel');
+             console.log(saudacaoCompleta);
+             
+             */
+            
+            //Compose
+            
+            let compor = (f, g) => x => f(g(x));
+            
+            let paraMaiuscula = x => x.toUpperCase();
+            
+            let exclamacao = x => x + '!';
+            
+            let grite = compor(paraMaiuscula, exclamacao);
+            console.log(grite);
+            
+            let resultado = grite("JavaScript");
+            console.log(resultado);
+            
+        </script>
+
+    </body>
+</html>
