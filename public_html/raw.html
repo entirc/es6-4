@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link rel="shortcut icon" href="Retro.png"/>
+        <title>ENTI ES6</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <h1>ENTI ES6</h1>
+
+        <a href='http://exploringjs.com/es6/ch_template-literals.html' target="_blank" >
+            8. Template literals
+        </a>
+        <br>
+        <a href='https://unicode-table.com/es/' target="_blank" >
+            Tabela Unicode
+        </a>
+
+        <script>
+            /*
+             Template Literals sempre produzem strings.
+             backticks ``
+             
+             interpotation ${eu}
+             
+             */
+
+            /*
+             let crase = `\``;
+             console.log(crase);
+             
+             let cifrao = `$`;
+             console.log(cifrao);
+             
+             let cifraoChaves = `\${}`;
+             console.log(cifraoChaves);
+             
+             //Nã
+             let cifraoChaves1 = `${}`;
+             console.log(cifraoChaves1);
+             */
+
+            /*
+             let barra = `\\`;
+             console.log(barra);
+             
+             let barraN = `\n`;
+             console.log(barraN);
+             
+             let unicode = `\u{42}`;
+             console.log(unicode);
+             
+             let barraNV2 = `\u{000A}`;
+             console.log(barraNV2);       
+             */
+
+            /*
+             let nome = 'Michel';
+             let sobrenome = 'Medeiros';
+             
+             let tagFunction = `Olá ${nome} ${sobrenome}!`;
+             console.log(tagFunction);
+             
+             let tagFunction1 = (['Olá', '', '!'], nome, sobrenome);
+             
+             console.log(tagFunction1);
+             */
+
+/*
+            let strOri = "String \n ... \\n";
+            console.log(strOri);
+
+            let strRaw = String.raw`String \n ... \\n`;
+            console.log(strRaw);
+
+            let comparar = String.raw`a` === `a`;
+            console.log(comparar);
+
+            let comparar1 = String.raw`${strOri}` === `${strRaw}`;
+            console.log(comparar1);
+
+            let tamanhoOri = String.raw`${strOri}`.length;
+            console.log(tamanhoOri);
+
+            let tamanhoRaw = String.raw`${strRaw}`.length;
+            console.log(tamanhoRaw);
+*/
+
+            /*
+             //http://www.keithcirkel.co.uk/es6-template-literals/
+             let cumprimento = (strings, valor) => {
+             console.log('Strings ', strings);
+             console.log('Strings0 ', strings[0]);
+             console.log('Strings1 ', strings[1]);
+             console.log('valor ', valor);
+             
+             console.log(strings[0] + valor + strings[1]);
+             };
+             
+             let lugar = "Mundo";
+             cumprimento(`Olá ${lugar}`);
+             console.log("----------------------------------------------------");
+             //tagged template literal
+             cumprimento`Olá ${lugar}`;
+             */
+
+            /*
+             //http://www.benmvp.com/learning-es6-template-literals-tagged-templates/
+             
+             let interpolar = (literals, ...substituicoes) => {
+             console.log(literals);
+             console.log(substituicoes);
+             let interpolacao = '';
+             
+             for (let i = 0; i < substituicoes.length; i++) {
+             interpolacao += literals[i] + substituicoes[i];
+             }
+             
+             interpolacao += literals[literals.length - 1];
+             
+             return interpolacao;
+             };
+             
+             let nome = 'Michel', sobrenome = 'Medeiros';
+             
+             console.log(interpolar`Nome: ${nome},${sobrenome}`);
+             */
+
+            /*
+             String.raw = (literals, ...substituicoes) => {
+             let rawLiterals = literals.raw, interpolacao = '';
+             
+             console.log(rawLiterals);
+             
+             for (let i = 0; i < substituicoes.length; i++) {
+             interpolacao += rawLiterals[i] + substituicoes[i];
+             }
+             
+             interpolacao += rawLiterals[rawLiterals.length - 1];
+             
+             return interpolacao;
+             };
+             console.log(String.raw`Nome: ${nome},${sobrenome}`);
+             */
+
+
+        </script>
+
+        <script>
+            /*    function quux(strings, ...values) {
+             strings[0];
+             console.log("strings[0] " + strings[0]);
+             strings[1];
+             console.log("strings[1] "+strings[1]);
+             
+             strings.raw[0];
+             console.log("raw0 " + strings.raw[0]);
+             strings.raw[1];
+             console.log("raw1 " + strings.raw[1]);
+             
+             values[0];
+             console.log('values[0] ' + values[0]);
+             }
+             
+             quux`foo\n${42}bar`;
+             
+             
+             String.raw`foo\n${42}bar` === "foo\\n42bar";
+             
+             console.log(String.raw);*/
+        </script>
+    </body>
+</html>

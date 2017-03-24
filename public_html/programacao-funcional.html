@@ -91,22 +91,21 @@ and open the template in the editor.
              */
 
 
-            // let numeros = [2, 3, 4];
+          /*  let numeros = [2, 3, 4];
 
-            /* function quadrado(x) {
-             return x * x;
-             }*/
-            /*  let quadrado = function (x) {
-             return x * x;
-             };*/
+            function quadrado(x) {
+                return x * x;
+            }*/
 
-            /*
-             let quadrado = x => x * x;
-             
-             var quadradosDosNumeros = numeros.map(quadrado);
-             
-             console.log(quadradosDosNumeros);
-             */
+            // let quadrado = function (x) {
+            //return x * x;
+            //};
+            
+            //let quadrado = x => x * x;
+
+          /*  var quadradosDosNumeros = numeros.map(quadrado);
+            console.log(quadradosDosNumeros);
+*/
 
             /*
              let estudantes = [
@@ -152,17 +151,25 @@ and open the template in the editor.
              * valor do array (da esquerda para direita), deve reduzí-lo a um único valor.
              */
 
-            /*
-             let numeros = [1,2,3];
+            /*    
+             let numeros = [2, 4, 6];
              
-             let soma = (x,y) => x+y;
+             let somar = (x, y) => {
+             console.log("Total Anterior: " + x + ' + Elemento: '+y);
+             return x + y;
+             };
              
-             let retorno = numeros.reduce(soma,0);
-             
+             let retorno = numeros.reduce(somar);
              console.log(retorno);
              
+             let retorno1  = somar(10,20);
+             console.log(retorno1);
              */
-
+            /*  
+             //meetup 3 
+             let soma = (...numeros) =>numeros.reduce((numero, total)=>{ console.log(numero+" - "+total); return total+=numero});
+             console.log("somando: " + soma(1,2,3,4));
+             */
             /* 
              let meses = ['Jan', 'Fev', 'Mar', '', 'Dez'];
              
