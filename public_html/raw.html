@@ -32,20 +32,23 @@ and open the template in the editor.
              
              */
 
-            /*
+            /*   
              let crase = `\``;
              console.log(crase);
+             
+             let crase1 = "\`";
+             console.log(crase1);
              
              let cifrao = `$`;
              console.log(cifrao);
              
              let cifraoChaves = `\${}`;
              console.log(cifraoChaves);
-             
-             //Nã
-             let cifraoChaves1 = `${}`;
-             console.log(cifraoChaves1);
              */
+            //Nã
+            //let cifraoChaves1 = `${}`;
+            //console.log(cifraoChaves1);
+
 
             /*
              let barra = `\\`;
@@ -73,29 +76,30 @@ and open the template in the editor.
              console.log(tagFunction1);
              */
 
-/*
-            let strOri = "String \n ... \\n";
-            console.log(strOri);
-
-            let strRaw = String.raw`String \n ... \\n`;
-            console.log(strRaw);
-
-            let comparar = String.raw`a` === `a`;
-            console.log(comparar);
-
-            let comparar1 = String.raw`${strOri}` === `${strRaw}`;
-            console.log(comparar1);
-
-            let tamanhoOri = String.raw`${strOri}`.length;
-            console.log(tamanhoOri);
-
-            let tamanhoRaw = String.raw`${strRaw}`.length;
-            console.log(tamanhoRaw);
-*/
-
             /*
+             let strOri = "String \n ... \\n";
+             console.log(strOri);
+             
+             let strRaw = String.raw`String \n ... \\n`;
+             console.log(strRaw);
+             
+             let comparar = String.raw`a` === `a`;
+             console.log(comparar);
+             
+             let comparar1 = String.raw`${strOri}` === `${strRaw}`;
+             console.log(comparar1);
+             
+             let tamanhoOri = String.raw`${strOri}`.length;
+             console.log(tamanhoOri);
+             
+             let tamanhoRaw = String.raw`${strRaw}`.length;
+             console.log(tamanhoRaw);
+             */
+
+            /*    
              //http://www.keithcirkel.co.uk/es6-template-literals/
              let cumprimento = (strings, valor) => {
+             console.log(typeof strings);
              console.log('Strings ', strings);
              console.log('Strings0 ', strings[0]);
              console.log('Strings1 ', strings[1]);
@@ -109,11 +113,11 @@ and open the template in the editor.
              console.log("----------------------------------------------------");
              //tagged template literal
              cumprimento`Olá ${lugar}`;
+             
              */
 
-            /*
-             //http://www.benmvp.com/learning-es6-template-literals-tagged-templates/
-             
+            //http://www.benmvp.com/learning-es6-template-literals-tagged-templates/
+            /*  
              let interpolar = (literals, ...substituicoes) => {
              console.log(literals);
              console.log(substituicoes);
@@ -148,33 +152,48 @@ and open the template in the editor.
              return interpolacao;
              };
              console.log(String.raw`Nome: ${nome},${sobrenome}`);
+             
              */
-
 
         </script>
 
         <script>
-            /*    function quux(strings, ...values) {
-             strings[0];
-             console.log("strings[0] " + strings[0]);
-             strings[1];
-             console.log("strings[1] "+strings[1]);
-             
-             strings.raw[0];
-             console.log("raw0 " + strings.raw[0]);
-             strings.raw[1];
-             console.log("raw1 " + strings.raw[1]);
-             
-             values[0];
-             console.log('values[0] ' + values[0]);
-             }
-             
-             quux`foo\n${42}bar`;
-             
-             
-             String.raw`foo\n${42}bar` === "foo\\n42bar";
-             
-             console.log(String.raw);*/
+      /*      function quux(strings, ...values) {
+                strings[0];
+                console.log("strings[0] " + strings[0]);
+                strings[1];
+                console.log("strings[1] " + strings[1]);
+
+                strings.raw[0];
+                console.log("raw0 " + strings.raw[0]);
+                strings.raw[1];
+                console.log("raw1 " + strings.raw[1]);
+
+                values[0];
+                console.log('values[0] ' + values[0]);
+            }
+
+            quux`foo\n${44}bar`;
+
+
+            String.raw`foo\n${42}bar` === "foo\\n42bar";
+
+            console.log(String.raw);*/
+
+//let bar = 'pinga';
+//let baz = 'cervejas';
+//let quux = 'no';
+
+//let bar1 = 'pinga1';
+
+            //          let v = ("http://example.com/foo?bar=", "&quux=", "", bar + baz, quux);
+
+            //        console.log(v);
+
+            //   let v1 = `http://example.com/foo?bar=${bar + baz}&quux=${quux}`;
+
+            // console.log(v1);
+
         </script>
     </body>
 </html>

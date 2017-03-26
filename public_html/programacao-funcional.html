@@ -27,29 +27,35 @@ and open the template in the editor.
         <hr>
         <h3>Higher-Order Functions</h3>
         <img src="https://cdn-images-1.medium.com/max/800/1*QaaVwrtutJRkO8ugJKJ3bw.jpeg" />
+
         <iframe width="854" height="480" src="https://www.youtube.com/embed/BMUiFMZr7vk" frameborder="0" allowfullscreen></iframe>
         <iframe width="854" height="480" src="https://www.youtube.com/embed/bCqtb-Z5YGQ" frameborder="0" allowfullscreen></iframe>
         <iframe width="854" height="480" src="https://www.youtube.com/embed/Wl98eZpkp-c" frameborder="0" allowfullscreen></iframe>
         <iframe width="854" height="480" src="https://www.youtube.com/embed/1DMolJ2FrNY" frameborder="0" allowfullscreen></iframe>
+
         <hr>
         <h3>Currying</h3>
+
         <iframe width="854" height="480" src="https://www.youtube.com/embed/iZLP4qOwY8I" frameborder="0" allowfullscreen></iframe>
+
         <hr>
         <h3>Compose</h3>
+
         <iframe width="854" height="480" src="https://www.youtube.com/embed/wfMtDGfHWpA" frameborder="0" allowfullscreen></iframe>
+
         <script>
 
             //funções puras (pure functions)
-            /*  
-             function square(x) {
+            //stateless - sem estado
+            /* function square(x) {
              return x * x;
              }
              let retorno = square(2);
              console.log(retorno);
+             
              */
 
-            /*
-             let itens = [2, 3, 4];
+            /*   let itens = [2, 3, 4];
              
              let quadrado = x => x * x;
              
@@ -57,22 +63,24 @@ and open the template in the editor.
              
              let resultado = todosOsQuadrados(itens);
              console.log(resultado);
+             console.log(itens);
              */
 
             /*efeitos colaterais(side-effects)*/
 
 
             /*Higher-Order-Functions*/
+
             /*
              let calcular = function (fn, x, y) {
              return fn(x, y);
              };
              
-             //  let soma = function (x, y) {
-             //    return x + y;
-             // };
-             
-             let soma = (x, y) => x + y;
+             /*  let soma = function (x, y) {
+             return x + y;
+             };*/
+
+            /*    let soma = (x, y) => x + y;
              
              let multiplica = function (x, y) {
              return x * y;
@@ -91,33 +99,37 @@ and open the template in the editor.
              */
 
 
-          /*  let numeros = [2, 3, 4];
+            //   let numeros = [2, 3, 4];
 
-            function quadrado(x) {
-                return x * x;
-            }*/
-
-            // let quadrado = function (x) {
-            //return x * x;
-            //};
-            
-            //let quadrado = x => x * x;
-
-          /*  var quadradosDosNumeros = numeros.map(quadrado);
-            console.log(quadradosDosNumeros);
-*/
+            /*function quadrado(x) {
+             return x * x;
+             }
+             
+             let quadrado = function (x) {
+             return x * x;
+             };*/
+            /*
+             let quadrado = x => x * x;
+             
+             let quadradosDosNumeros = numeros.map(quadrado);
+             console.log(quadradosDosNumeros);
+             */
 
             /*
              let estudantes = [
-             {nome:'Anna', ano:6},
-             {nome:'Jorge', ano:4},
-             {nome:'Maria', ano:9}
+             {nome: 'Anna', ano: 6},
+             {nome: 'Jorge', ano: 4},
+             {nome: 'Maria', ano: 9}
              ];
              
              let professores = [
-             {nome:'Marcos', salario:2500},
-             {nome:'Tadeu', salario:3700},
-             {nome:'Angela', salario:1900}
+             {nome: 'Marcos', salario: 2500},
+             {nome: 'Tadeu', salario: 3700},
+             {nome: 'Angela', salario: 1900}
+             ];
+             
+             let carro = [
+             {nome:'fusca'}
              ];
              
              let porNome = object => object.nome;
@@ -128,8 +140,8 @@ and open the template in the editor.
              console.log(estudantesLista);
              let professoresLista = porNomes(professores);
              console.log(professoresLista);
+             
              */
-
             /*
              * https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filtro
              * O método filter() cria um novo array com todos os elementos que 
@@ -140,9 +152,10 @@ and open the template in the editor.
              
              let ehMaiorQueQuatro = valor => valor > 4;
              
-             let resultado = numeros.filter(ehMaiorQueQuatro);
+             let resultado = numeros.find(ehMaiorQueQuatro);
              
              console.log(resultado);
+             console.log(numeros);
              */
 
             /*
@@ -150,8 +163,7 @@ and open the template in the editor.
              * O método reduce() aplica uma função sobre um acumulador e cada 
              * valor do array (da esquerda para direita), deve reduzí-lo a um único valor.
              */
-
-            /*    
+            /*  
              let numeros = [2, 4, 6];
              
              let somar = (x, y) => {
@@ -161,16 +173,16 @@ and open the template in the editor.
              
              let retorno = numeros.reduce(somar);
              console.log(retorno);
-             
-             let retorno1  = somar(10,20);
-             console.log(retorno1);
              */
-            /*  
+            // let retorno1  = somar(10,20);
+            //console.log(retorno1);
+
+            /* 
              //meetup 3 
-             let soma = (...numeros) =>numeros.reduce((numero, total)=>{ console.log(numero+" - "+total); return total+=numero});
+             let soma = (...numeros) =>numeros.reduce((numero, total)=>{ console.log(numero+" - "+total); return total+numero});
              console.log("somando: " + soma(1,2,3,4));
              */
-            /* 
+            /*
              let meses = ['Jan', 'Fev', 'Mar', '', 'Dez'];
              
              let retornaMeses = (anterior, atual) => {
@@ -186,24 +198,22 @@ and open the template in the editor.
              let retorno = meses.reduce(retornaMeses);
              
              console.log(retorno);
-             
              */
 
 
-            //Currying
-            //     let somar = (x, y) => x + y;
-            //   let retorno = somar(1, 2);
-            //  console.log(retorno);
 
-            /*    let somar1 = function (x) {
+            //Currying
+            /*  let somar = (x, y) => x + y;
+             let retorno = somar(1, 2);
+             console.log(retorno);
+             */
+            /* let somar1 = function (x) {
              console.log('x ' + x);
              return function (y) {
              console.log('y ' + y);
              return x + y;
              };
-             };
-             */
-
+             };*/
             /*
              let somar1 = x => y => x+y;
              
@@ -212,11 +222,13 @@ and open the template in the editor.
              
              
              let adicionarCinco = somar1(5);
-             let r = adicionarCinco(3);
+             let r = adicionarCinco(3); 
+             let r1 = adicionarCinco(2);
              console.log(r);
+             console.log(r1);
+             
              */
-
-            /*   
+            /*  
              let saudacao = fala => nome => fala + nome;
              let inicio = saudacao('Olá '); 
              console.log(inicio);
@@ -242,6 +254,27 @@ and open the template in the editor.
              */
 
         </script>
+        <!--Funções puras
+        Pure Function (Funções Puras)
+        https://www.youtube.com/watch?v=1OrEqycGoiM
+        
+        FUNÇÕES PURAS
+        https://www.youtube.com/watch?v=1u9QZPj04Pg
+        
+        
+        -->
 
+        <!--Funções puras e impuras
+Pure Functions / Intro to JavaScript ES6 programming, lesson 18
+https://www.youtube.com/watch?v=dZ41D6LDSBg
+
+
+        -->
+
+        <!-- Programação Funcional
+        Anjana Vakil: Learning Functional Programming with JavaScript - JSUnconf 2016
+        https://www.youtube.com/watch?v=e-5obm1G_FY
+        
+        -->
     </body>
 </html>
